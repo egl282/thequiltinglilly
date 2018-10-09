@@ -1514,7 +1514,7 @@ pre code {
 }
 
 .table {
-  width: 100%;
+  width: 50%;
   max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
@@ -1564,6 +1564,10 @@ pre code {
 .table-borderless thead th,
 .table-borderless tbody + tbody {
   border: 0;
+}
+
+.table-striped {
+  margin: 0px auto;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {

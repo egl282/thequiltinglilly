@@ -5,3 +5,9 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
 }
+.table-striped {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+}

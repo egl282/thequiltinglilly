@@ -9,3 +9,9 @@ class AboutView(TemplateView):
 
 class ContactView(TemplateView):
     template_name = 'main/contact.html'
+
+class PricingView(TemplateView):
+    template_name = 'main/pricing.html'
+
+class PreviousWorkView(TemplateView):
+    template_name = 'main/previous_work.html'

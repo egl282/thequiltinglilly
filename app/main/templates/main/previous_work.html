@@ -25,18 +25,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'main:index' %}">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'main:previous_work' %}">Previous Work</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'main:previous_work' %}">Previous Work <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'main:pricing' %}">Pricing</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'main:about' %}">About <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:about' %}">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
@@ -48,8 +47,27 @@
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>About The Quilting Lilly</h1>
-        <p class="lead">You can add some personal info about you here if you want or I can remove this page altogether if you want.</p>
+        <h1>Examples of Previous Work</h1>
+        <p class="lead">The following are some videos and pictures of previous work that I have done.<br> If you like what you see feel free to contact me to place an order!</p>
+        <h2>Videos</h2>
+        {% load get_videos %}
+        {% get_videos as videos %}
+        {% for file in videos %}
+        {% with 'main/videos/'|add:file as static_video %}
+        <video width="320" height="240" controls>
+          <source src="{% static static_video %}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        {% endwith %}
+        {% endfor %}
+        <h2>Images</h2>
+        {% load get_images %}
+        {% get_images as images %}
+        {% for file in images %}
+        {% with 'main/images/'|add:file as static_image %}
+        <img src="{% static static_image %}" alt="{{ file }}" width="304" height="236">
+        {% endwith %}
+        {% endfor %}
       </div>
 
     </main><!-- /.container -->

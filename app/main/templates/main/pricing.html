@@ -1,0 +1,425 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'main/logos/favicon.ico' %}">
+
+    <title>The Quilting Lilly</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/starter-template.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="{% url 'main:index' %}"><img src="{% static 'main/logos/Header.png' %}" alt="The Quilting Lilly" style="width:238px;height:46px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:previous_work' %}">Previous Work</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'main:pricing' %}">Pricing <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Pricing Information</h1><br/>
+        <h2>T-Shrit Quilts</h2>
+        <p>NOTE: the math doesnt quite add up in this table</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Quilt Type</th>
+              <th>Block Dimensions</th>
+              <th>Number of Shirts</th>
+              <th>Block Size (inches)</th>
+              <th>Quilt Size Without Sash/Border</th>
+              <th>Price Without Sash/Border</th>
+              <th>Cost of Sash/Border</th>
+              <th>Total With Sash/Border</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lap or Baby</td>
+              <td>4 x 5</td>
+              <td>20</td>
+              <td>10</td>
+              <td>40 x 50</td>
+              <td>$200.00</td>
+              <td>$30.00</td>
+              <td>$230.00</td>
+            </tr>
+            <tr>
+              <td>The Square</td>
+              <td>6 x 6</td>
+              <td>36</td>
+              <td>10</td>
+              <td>60 x 60</td>
+              <td>360.00</td>
+              <td>$35.00</td>
+              <td>$395.00</td>
+            </tr>
+            <tr>
+              <td>Twin</td>
+              <td>6 x 8</td>
+              <td>48</td>
+              <td>10</td>
+              <td>60 x 80</td>
+              <td>$516.00</td>
+              <td>$35.00</td>
+              <td>$551.00</td>
+            </tr>
+            <tr>
+              <td>Full</td>
+              <td>7 x 8</td>
+              <td>56</td>
+              <td>10</td>
+              <td>70 x 80</td>
+              <td>$612.00</td>
+              <td>$40.00</td>
+              <td>$652.00</td>
+            </tr>
+            <tr>
+              <td colspan="8">&nbsp</td>
+            </tr>
+            <tr>
+              <td>Lap or Baby</td>
+              <td>3 x 4</td>
+              <td>12</td>
+              <td>12</td>
+              <td>36 x 48</td>
+              <td>$120.00</td>
+              <td>$30.00</td>
+              <td>$150.00</td>
+            </tr>
+            <tr>
+              <td>Rectangle</td>
+              <td>4 x 5</td>
+              <td>20</td>
+              <td>12</td>
+              <td>48 x 60</td>
+              <td>$240.00</td>
+              <td>$30.00</td>
+              <td>$270.00</td>
+            </tr>
+            <tr>
+              <td>The Square</td>
+              <td>5 x 5</td>
+              <td>25</td>
+              <td>12</td>
+              <td>60 x 60</td>
+              <td>$250.00</td>
+              <td>$35.00</td>
+              <td>$285.00</td>
+            </tr>
+            <tr>
+              <td>Twin</td>
+              <td>6 x 7</td>
+              <td>42</td>
+              <td>12</td>
+              <td>72 x 84</td>
+              <td>$444.00</td>
+              <td>$40.00</td>
+              <td>$484.00</td>
+            </tr>
+            <tr>
+              <td>Full</td>
+              <td>7 x 7</td>
+              <td>49</td>
+              <td>12</td>
+              <td>84 x 84</td>
+              <td>$588.00</td>
+              <td>$40.00</td>
+              <td>$628.00</td>
+            </tr>
+            <tr>
+              <td>Queen</td>
+              <td>7 x 8</td>
+              <td>56</td>
+              <td>12</td>
+              <td>84 x 96</td>
+              <td>$612.00</td>
+              <td>$45.00</td>
+              <td>$657.00</td>
+            </tr>
+            <tr>
+              <td>King</td>
+              <td>8 x 8</td>
+              <td>64</td>
+              <td>12</td>
+              <td>96 x 96</td>
+              <td>$708.00</td>
+              <td>$45.00</td>
+              <td>$753.00</td>
+            </tr>
+            <tr>
+              <td colspan="8">&nbsp</td>
+            </tr>
+            <tr>
+              <td>Rectangle</td>
+              <td>4 x 5</td>
+              <td>20</td>
+              <td>14</td>
+              <td>56 x 70</td>
+              <td>$280.00</td>
+              <td>$35.00</td>
+              <td>$315.00</td>
+            </tr>
+            <tr>
+              <td>The Square</td>
+              <td>5 x 5</td>
+              <td>25</td>
+              <td>14</td>
+              <td>70 x 70</td>
+              <td>$250.00</td>
+              <td>$40.00</td>
+              <td>$290.00</td>
+            </tr>
+            <tr>
+              <td>Twin</td>
+              <td>5 x 6</td>
+              <td>30</td>
+              <td>14</td>
+              <td>70 x 84</td>
+              <td>$300.00</td>
+              <td>$40.00</td>
+              <td>$340.00</td>
+            </tr>
+            <tr>
+              <td>Full</td>
+              <td>6 x 6</td>
+              <td>36</td>
+              <td>14</td>
+              <td>84 x 84</td>
+              <td>$372.00</td>
+              <td>$40.00</td>
+              <td>$412.00</td>
+            </tr>
+            <tr>
+              <td>Queen</td>
+              <td>6 x 7</td>
+              <td>42</td>
+              <td>14</td>
+              <td>84 x 98</td>
+              <td>$444.00</td>
+              <td>$45.00</td>
+              <td>$489.00</td>
+            </tr>
+            <tr>
+              <td>King</td>
+              <td>7 x 7</td>
+              <td>49</td>
+              <td>14</td>
+              <td>98 x 98</td>
+              <td>$528.00</td>
+              <td>$45.00</td>
+              <td>$573.00</td>
+            </tr>
+            <tr>
+              <td colspan="8">&nbsp</td>
+            </tr>
+            <tr>
+              <td>Rectangle</td>
+              <td>4 x 5</td>
+              <td>20</td>
+              <td>16</td>
+              <td>64 x 80</td>
+              <td>$280.00</td>
+              <td>$35.00</td>
+              <td>$315.00</td>
+            </tr>
+            <tr>
+              <td>Twin</td>
+              <td>4 x 6</td>
+              <td>24</td>
+              <td>16</td>
+              <td>64 x 96</td>
+              <td>$240.00</td>
+              <td>$40.00</td>
+              <td>$280.00</td>
+            </tr>
+            <tr>
+              <td>The Square</td>
+              <td>5 x 5</td>
+              <td>25</td>
+              <td>16</td>
+              <td>80 x 80</td>
+              <td>$250.00</td>
+              <td>$40.00</td>
+              <td>$290.00</td>
+            </tr>
+            <tr>
+              <td>Full</td>
+              <td>5 x 6</td>
+              <td>30</td>
+              <td>16</td>
+              <td>80 x 96</td>
+              <td>$300.00</td>
+              <td>$45.00</td>
+              <td>$345.00</td>
+            </tr>
+            <tr>
+              <td>Queen/King</td>
+              <td>6 x 6</td>
+              <td>36</td>
+              <td>16</td>
+              <td>96 x 96</td>
+              <td>$372.00</td>
+              <td>$45.00</td>
+              <td>$417.00</td>
+            </tr>
+            <tr>
+              <td>Large King</td>
+              <td>7 x 6</td>
+              <td>42</td>
+              <td>16</td>
+              <td>112 x 96</td>
+              <td>$444.00</td>
+              <td>$50.00</td>
+              <td>$494.00</td>
+            </tr>
+            <tr>
+              <td colspan="8">Collage Quilts (varied block sizes) are $10 per shirt up to 30 shirts then $12 a shirt after 30.</td>
+            </tr>
+            <tr>
+              <td colspan="8">$0.10 per linear inch for a 3 inch border. Prices can change anytime.</td>
+            </tr>
+            <tr>
+              <td colspan="8">Quilt sizes are approximate as the quilt will shrink during the final quilt stitching.</td>
+            </tr>
+            <tr>
+              <td colspan="8">Minium $50 charge for all quilts.</td>
+            </tr>
+            <tr>
+              <td colspan="8">Additional charges can apply for special quilting patterns, threads, batting, extra borders, etc.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h2>Style 1</h2>
+        <p class="lead">Block style without sashing and border</p>
+        <img src="{% static 'main/pricing_images/tshirtstyle1.png' %}" alt="style1" width="304" height="236">
+        <h2>Style 2</h2>
+        <p class="lead">Block style with sashing and border</p>
+        <img src="{% static 'main/pricing_images/tshirtstyle2.png' %}" alt="style2" width="304" height="236">
+        <h2>Style 3</h2>
+        <p class="lead">Collage style without border (block sizes will vary)</p>
+        <img src="{% static 'main/pricing_images/tshirtstyle3.png' %}" alt="style3" width="304" height="236">
+        <br/>
+        <br/>
+        <h2>T-Shirt Quilt Preparation</h2>
+        <ol class="text-left">
+          <li>Gather shirts you want to use making a pile of "must be used" in the quilt and a small pile of "can be used" to fill in areas.</li>
+          <li>Place a piece of painter's tape 3-6 inches long on top of graphic to be used.</li>
+          <li>Decide what style quilt you want from the 3 above.  Also decide if you want to add a border to the Style 1 or 3.</li>
+          <li>Shirts with graphics on front and back to be used are considered 2 shirts.  Small pocket size graphics on the front of the shirt and/ or sleeve can be combined to make one block in any style. (To be charged at half shirt price per graphic.)</li>
+          <li>Decide on whether you will provide backing or have The Quilting Lilly (TQL) provide for a fee (typically $20yd).</li>
+        </ol>
+        <br/>
+        <h2>Just Quilting</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Quilt Type</th>
+              <th>Price/sq in</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Simple Pattern</td>
+              <td>$0.02</td>
+            </tr>
+            <tr>
+              <td>Medium Density</td>
+              <td>$0.025</td>
+            </tr>
+            <tr>
+              <td>Heavy Density</td>
+              <td>$0.03</td>
+            </tr>
+            <tr>
+              <td>Semi-Custom</td>
+              <td>$0.025 and up</td>
+            </tr>
+            <tr>
+              <td>Custom</td>
+              <td>$0.035 and up</td>
+            </tr>
+            <tr>
+              <td colspan="2">Additional charges may apply for special patterns, thread or batting</td>
+            </tr>
+            <tr>
+              <td colspan="2">Minimum $50 charge for all quilts</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h2>Batting</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Price/yard</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>80/20</td>
+              <td>$5.00</td>
+            </tr>
+            <tr>
+              <td>Cotton</td>
+              <td>$6.00</td>
+            </tr>
+            <tr>
+              <td>Wool</td>
+              <td>$9.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h2>Just Quilting Services Preparation</h2>
+        <ol class="text-left">
+          <li>Quilt top: Pressed with all seams pressed and laying flat either to side or open. Please trim excess threads.</li>
+          <li>Backing: Pressed and seam/s pressed flat either to side or open.</li>
+          <li>Backing: At least 4 inches wider than quilt top on each side, top, and bottom. Sheets are not a good choice for backing. Please  discuss with me before choosing sheeting for backing.</li>
+          <li>Batting: At least 3-4 inches wider than quilt top on each side, top, and bottom. You can get batting from me. If you choose to provide batting, please remove batting from package and lay out to relax a day or two to remove creases before bringing to me. You may also need to press/steam out deep creases.</li>
+        </ol>
+      </div>
+
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'main/js/vendor/jquery.min.js' %}"><\/script>')</script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
